@@ -33,6 +33,30 @@ There is a lot of flags that can be passed compiling the code
 - Optimization options;
   - -00 no optimization
   - -03 or -0fast full optimizations
+  
+## Libraries
+
+- Collection of function implementations. 
+- Library multiple object files that are logically connected
+- Types of librarires;
+  - Static : Faster , take a lot of space, become part of the end binary, named: lib*.a
+  - Dynamic: Slower, can be copied , referenced by program , named lib*.so
+- Create static lib;
+  - ar rcs libname.a module.o module.o ....
+- Static libraried are just archives just like
+
+Function declaration sets up an interface;
+```cpp
+void FuncName(int param);
+```
+Function definition ;
+```cpp
+void FuncName(int Param){
+   // codes
+}
+```
+
+- Move all declarations to header files (*.hpp)
 
 ![The Compiler](<Screenshot from 2024-01-08 22-45-36.png>)
 
