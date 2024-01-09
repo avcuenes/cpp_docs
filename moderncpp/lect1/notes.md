@@ -58,6 +58,10 @@ void FuncName(int Param){
 
 - Move all declarations to header files (*.hpp)
 
+## What is linking
+
+- The library is a binary object that contains the compiled implemenatation of some methods.
+
 ![The Compiler](<Screenshot from 2024-01-08 22-45-36.png>)
 
 
