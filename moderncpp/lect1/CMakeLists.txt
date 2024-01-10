@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1) # Mandotory
 project(first_project)              # Mandotory
 set(CMAKE_CXX_STANDARD 17)          # Use c++17
-
+set(CMAKE_CXX_FLAGS "-Wall")
 
 # tell cmake where to loook for *.hpp , *.h files
 include_directories(include/)
