@@ -82,5 +82,50 @@ mytype::var;        // static data member
 mytype.data_member  // non-static data member
 ```
 
+## Const
 
- 
+- Use const to declare a constant
+- The compiler will guard it from any changes
+
+
+```cpp
+const float kImportantFloat = 20.0f;
+const int kSomeInt = 20;
+const std::string khel = "hello";
+```
+
+
+
+## References to variables
+
+- We can createa reference to any variable
+- Use & to state that a variable is a reference
+  ```cpp
+  float& ref = originalvar;
+  std::string& hello = hello;
+  ```
+- whatever happens to a reference happens to the variable and vice versa
+
+## Const with references
+
+- References are fast but reduce control
+- To avoid unwanted changes use const
+  - const float& ref = originalvar;
+  - const std::string& helloref = hello;
+  
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int num = 42;
+    int& ref = num;
+    const int& kref =   num;
+
+    ref = 0;
+    cout << ref << "" num << "" << kref << endl;
+    return 0;
+}
+
+```
