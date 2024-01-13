@@ -182,3 +182,41 @@ letters_.clear();
 
 
 
+- Same speed as C-style arrays but safer
+- Code readability
+- More functionalty provided than a plain c-style array;
+  - size()
+  - empty()
+  - front()
+  - back()
+  - swap()
+  - STL algorithms
+
+## std::map
+
+- sorted associative container
+- contains key-value pairs.
+- keys are unique 
+- keys are stored using the < operator.
+
+
+- create from data:
+  - ```cpp
+  std::map <KeyT , ValueT> m{{key1, value1}, {}}
+  ```
+- check size: m.size()
+- Add item to map : m.emplace(key, value);
+- Modify or add item : m[key] = value;
+
+# Iterators
+![Alt text](<Screenshot from 2024-01-12 23-54-57.png>)
+
+STL uses iterators to acces data in containers
+
+- Iterators are similar to pointers
+- Allow quick navigation through containers
+- Most algorithms is STL use iterators
+- Defined for all using STL containers
+- Acces current element with *iter
+- Accepts -> alike to pointers
+  
