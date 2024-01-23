@@ -2,34 +2,31 @@
 #include <string>
 #include <vector>
 
+class Image {
+    public:
+        Image() = default;
+        explicit Image(const std::string& filename);
+        ~Image();
 
+        bool IsImageEmpty() const;
 
-void SaveImage(const std::string& filename, const std::vector<uint8_t>& data,
-                int rows, int cols);
+        void SaveImage(const std::string& filename);
 
-void LoadImage(const std::string& filename, std::vector<uint8_t>& data,
-                int& rows, int& cols);
-
-bool IsImageEmpty(const std::vector<uint8_t>& data);
+    private:
+        std::vector<uint8_t> data_;
+        int rows_ = 0;
+        int cols_ = 0;
+}
 
 
 int main() {
-    std::vector<uint8_t> data;
-    
-    int rows = 0;
-    int cols = 0;
+    Image img("lenna.png")
 
-    // Populate image
-    LoadImage("lenna.png",data,rows,cols);
-
-    if(IsImageEmpty(data) || (rows == 0 && cols == 0)) {
-        std::cerr << "[ERROR] Image not loaded \n";
-        return 1;
+    if (img.empty()){
+        std::cerr << "error";
+        return 1
     }
-
-    // do something with image data ...
-
-    SaveImage("lenna_new.png",data,rows,cols);
+    img.SaveImage("lennanew.png");
 
     return 0;
 }
