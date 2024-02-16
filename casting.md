@@ -43,3 +43,6 @@ int main()
 }
 
 ```
+
+## References
+1. <https://www.geeksforgeeks.org/static_cast-in-cpp/>
