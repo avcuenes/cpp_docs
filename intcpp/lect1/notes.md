@@ -39,6 +39,14 @@ hello.c * angle brackets -> use the system search path
 
 gcc -DDEBUG debug.c -o debug
 
+# Compile
+Type checking and linear processing
+Everything has a single fixed type
+
+Linear processing
+
+You can only use whats declared above
+
 
 ## References
 1. <https://www.ibm.com/docs/it/aix/7.1?topic=c-cpp-command>
